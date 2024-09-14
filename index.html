@@ -74,24 +74,17 @@
                     </div>
 
                     <div class="home__img">
-                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <svg class="home__blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <mask id="mask0" mask-type="alpha">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547
-            130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775
-            97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666
-            0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                                <circle cx="100" cy="100" r="100" /> <!-- Circular mask -->
                             </mask>
                             <g mask="url(#mask0)">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346
-            165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403
-            129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028
-            -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                                <image class="home__blob-img" x="-22" y="-20" xlink:href="assets/img/profilepic.JPEG" />
+                                <circle cx="100" cy="100" r="100" fill="#f0f0f0"/> <!-- Background circle -->
+                                <image class="home__blob-img" x="-55" y="-35" width="300" height="300" xlink:href="assets/img/profilepic.JPEG" />
                             </g>
                         </svg>
-
                     </div>
+
                     <div class="home__data">
                         <h1 class="home__title">Hello there, I'm Marco.
                         </h1>
@@ -138,7 +131,7 @@
                 <div class="Expertise__content">
                     <div>
                         <i class="uil uil-brain Expertise__icon"></i>
-                        <h3 class="Expertise__title">Deep Learning & Machine Learning</h3>
+                        <h3 class="Expertise__title">Deep Learning & <br> Machine Learning</h3>
                     </div>
                 </div>
 
@@ -157,7 +150,7 @@
 
         <section class="articles section" id="portfolio">
             <h2 class="section__title">Projects [Work in Progress]</h2>
-            <span class="section__subtitle">See some of my public projects</span>
+            <span class="section__subtitle">Browse some of my public projects</span>
         
             <div class="articles__container container grid">
                 <!--==================== ARTICLE 1 ====================-->
@@ -166,7 +159,11 @@
                         <img src="assets/img/protein_1a3n.png" width="30%" height="30%" alt="Project Image" class="card-image"/>
                         <a href="">
                             <h4>Classification of Residue-Residue Contacts in Protein Structures</h4>
-                            <p>Predicting the RING classification of a contact using Deep Neural Networks</p>
+                            <div class="card-tags">
+                                <span class="tag">Deep Learning</span>
+                                <span class="tag">Computational Biology</span>
+                                <span class="tag">Structural Bioinformatics</span>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -176,8 +173,11 @@
                     <div class="card">
                         <img src="assets/img/mnist_fw.png" alt="Project Image" class="card-image"/>
                         <a href="">
-                            <h4>Zeroth-Order Frank-Wolfe Variants for Adversarial Attacks</h4>
-                            <p>Frank-Wolfe Algorithm Variants for Black-Box Adversarial Attacks on DNNs</p>
+                            <h4>Zeroth-Order Frank-Wolfe Variants for Adversarial Attacks on DNNs</h4>
+                            <div class="card-tags">
+                                <span class="tag">Deep Learning</span>
+                                <span class="tag">Optimization</span>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -187,8 +187,10 @@
                     <div class="card">
                         <img src="assets/img/protein_family.png" alt="Project Image" class="card-image"/>
                         <a href="">
-                            <h4>Protein Domain Family Modelling and Functional Characterization from a Single Sequence</h4>
-                            <p>Bioinformatic Analysis of a Protein Domain Family</p>
+                            <h4>Protein Domain Family Modelling and Functional Characterization</h4>
+                            <div class="card-tags">
+                                <span class="tag">Computational Biology</span>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -201,7 +203,10 @@
                         <img src="assets/img/networkofthrones.png" alt="Project Image" class="card-image"/>
                         <a href="">
                             <h4>A Network of Thrones</h4>
-                            <p>Network Science Project: Game of Thrones through Character Interaction Networks</p>
+                            <div class="card-tags">
+                                <span class="tag">Network Science</span>
+                                <span class="tag">Data Analysis</span>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -212,8 +217,11 @@
                 <div class="card">
                     <img src="assets/img/gpt_liedetection.png" alt="Project Image" class="card-image"/>
                     <a href="">
-                        <h4>GPT-3.5 Lie Detection</h4>
-                        <p>Fine-Tuning OpenAI's GPT-3.5 as a Lie Detector</p>
+                        <h4>Fine-Tuning GPT-3.5 for Lie Detection</h4>
+                        <div class="card-tags">
+                            <span class="tag">Large Language Model</span>
+                            <span class="tag">Natural Language Processing</span>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -224,8 +232,11 @@
                 <div class="card">
                     <img src="assets/img/csdemoparser.png" alt="Project Image" class="card-image"/>
                     <a href="">
-                        <h4>CSDemoParser</h4>
-                        <p>Automated Parsing of CS:GO Player Action Logging for AI-Based Identity Recognition</p>
+                        <h4>CSDemoParser: Automated Parsing of CS:GO Player Actions to Dataset</h4>
+                        <div class="card-tags">
+                            <span class="tag">Data Processing</span>
+                            <span class="tag">Datasets</span>
+                        </div>
                     </a>
                 </div>
             </div>

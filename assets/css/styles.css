@@ -307,8 +307,8 @@ img{
 }
 
 .home__blob-img{
-    width: 250px; /* Set specific width */
-    height: 250px; /* Set specific height */
+
+    object-fit: cover; /* Ensure the image scales properly */
 
 }
 
@@ -988,7 +988,7 @@ img{
 
 .card {
     background-color: var(--container-color);
-    border-radius: 5px;
+    border-radius: 10px;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     display: flex;
@@ -1051,13 +1051,55 @@ img{
     margin: 0;
     color: var(--text-color);
     overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: unset; /* Remove ellipsis */
+    text-overflow: visible;
     display: -webkit-box;
     -webkit-line-clamp: 3;  /* Limits the number of lines */
     -webkit-box-orient: vertical;
 }
 
 
+/* Tags section inside the card */
+.card-tags {
+    margin-top: 1rem; /* Space between title and tags */
+    margin-bottom: 1rem; /* Space between tags and description */
+    display: flex;
+    flex-wrap: wrap; /* Allows the tags to wrap to the next line if needed */
+    gap: 0.5rem; /* Space between each tag */
+}
+
+/* Remove hover effect */
+.card-tag:hover {
+    background-color: var(--first-color-light); /* Keep the background color the same */
+    color: var(--text-color); /* Keep text color the same */
+    cursor: default; /* Normal cursor to indicate it's not clickable */
+}
+
+
+/* Individual tag styling */
+.tag {
+    background-color: var(--first-color); /* Choose a color for the tags */
+    color: #fff; /* White text color */
+    font-size: 0.75rem; /* Adjust tag font size */
+    padding: 0.25rem 0.75rem; /* Padding inside the tag */
+    border-radius: 15px; /* Rounded rectangle appearance */
+    display: inline-block; /* Make sure each tag is inline */
+    text-align: center; /* Center text in the tag */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+
+/* Adjust tag font size and spacing for smaller devices */
+@media screen and (max-width: 600px) {
+    .tag {
+        font-size: 0.65rem; /* Slightly smaller font for small screens */
+        padding: 0.2rem 0.6rem; /* Adjust padding */
+    }
+    
+    .card-tags {
+        gap: 0.25rem; /* Reduce space between tags */
+    }
+}
 
 
 
@@ -1231,6 +1273,13 @@ img{
     .home__img{
         order: 1;
         justify-self: center;
+        width: 250px; /* Adjust size as needed */
+        height: 250px; /* Ensure the width and height are equal for a perfect circle */
+        border-radius: 50%; /* Make the image round */
+        object-fit: cover; /* Ensures the image scales to fit the circle without distortion */
+        justify-self: center;
+        display: block;
+        margin: 0 auto;
     }
 
     .about__container,
