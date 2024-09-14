@@ -666,10 +666,41 @@ img{
     border-radius: .2rem;
 }
 /*==================== Expertise ====================*/
+
+
+/* For medium devices and up */
+@media screen and (min-width: 768px) {
+    .Expertise__container {
+        grid-template-columns: repeat(3, 1fr); /* Maintain 3 columns */
+        column-gap: 2rem; /* Add gap between columns */
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 768px) {
+    .Expertise__container {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on smaller screens */
+        justify-content: center; /* Center the grid items */
+        row-gap: 1.5rem; /* Add space between rows */
+    }
+    
+    .Expertise__content {
+        padding: 1.5rem; /* Add padding to content for better appearance */
+    }
+    
+    .Expertise__icon {
+        font-size: 1.5rem; /* Resize icons on smaller screens */
+        margin-bottom: 1rem; /* Add spacing between icon and text */
+    }
+    
+    .Expertise__title, .Expertise__description {
+        font-size: 0.875rem; /* Resize text for better readability */
+    }
+}
+
 .Expertise__container{
-    display:grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .Expertise__content{
@@ -869,9 +900,7 @@ img{
 
 /*==================== CONTACT ME ====================*/
 .contact__container{
-    display: flex;
-    justify-content: center; /* Centers the container */
-    align-items: center;     /* Centers vertically */
+    row-gap: 3rem;
 }
 
 
@@ -940,21 +969,44 @@ img{
     margin: 0 auto; /* Horizontally centers the container */
 }
 
-/* Cards */
-.card {
+
+/*.card {
     background-color: var(--container-color);
     border-radius: 5px;
     margin: 10px;
-    padding: 0;  /* Removed padding to allow for internal layout */
+    padding: 0;  
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     text-align: left;
     overflow: hidden;
-    width: 300px;  /* Fixed width */
-    height: 350px; /* Fixed height */
+    width: 300px;  
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}*/
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Full width for responsiveness */
+    padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%; /* Make the card full width on smaller screens */
+        margin-bottom: 1rem;
+    }
+
+    .articles__container {
+        display: block; /* Change from grid to block layout for mobile */
+        width: 100%; /* Ensure the container spans the full width */
+        max-width: none; /* Remove any maximum width restriction */
+        margin: 0 auto; /* Horizontally centers the container */
+    }
+    
 }
 
 .card:hover {
@@ -993,32 +1045,8 @@ img{
     -webkit-box-orient: vertical;
 }
 
-/* Journal text */
-.journal {
-    font-size: var(--smaller-font-size);
-    color: var(--first-color);
-    font-weight: var(--font-semi-bold);
-    font-style: italic;
-}
 
-/* Responsive Layout: 2 columns for medium screens */
-@media (max-width: 1024px) {
-    .articles__container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-/* Responsive Layout: 1 column for small screens */
-@media (max-width: 768px) {
-    .articles__container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Remove swiper pagination */
-.swiper-container .swiper-pagination-articles {
-    display: none;
-}
 
 
 
@@ -1299,7 +1327,7 @@ img{
     }
 
     .Expertise__container{
-        grid-template-columns: repeat(4, 218px);
+        grid-template-columns: repeat(3, 218px);
         justify-content: center;
     }
     .Expertise__icon{
