@@ -1052,9 +1052,8 @@ img{
     color: var(--text-color);
     overflow: hidden;
     overflow: unset; /* Remove ellipsis */
-    text-overflow: visible;
+    text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;  /* Limits the number of lines */
     -webkit-box-orient: vertical;
 }
 
@@ -1080,8 +1079,8 @@ img{
 .tag {
     background-color: var(--first-color); /* Choose a color for the tags */
     color: #fff; /* White text color */
-    font-size: 0.75rem; /* Adjust tag font size */
-    padding: 0.25rem 0.75rem; /* Padding inside the tag */
+    font-size: 0.60rem; /* Adjust tag font size */
+    padding: 0.25rem 0.30rem; /* Padding inside the tag */
     border-radius: 15px; /* Rounded rectangle appearance */
     display: inline-block; /* Make sure each tag is inline */
     text-align: center; /* Center text in the tag */
@@ -1092,15 +1091,32 @@ img{
 /* Adjust tag font size and spacing for smaller devices */
 @media screen and (max-width: 600px) {
     .tag {
-        font-size: 0.65rem; /* Slightly smaller font for small screens */
+        font-size: 0.60rem; /* Slightly smaller font for small screens */
         padding: 0.2rem 0.6rem; /* Adjust padding */
     }
     
     .card-tags {
+        margin-top: 1rem; /* Space between title and tags */
         gap: 0.25rem; /* Reduce space between tags */
+        margin-bottom: 0rem; /* Space between tags and description */
     }
 }
 
+@media screen and (min-width: 768px) {
+    .card-tags {
+        margin-top: 1rem; /* Space between title and tags */
+        gap: 0.25rem; /* Reduce space between tags */
+        margin-bottom: 0rem; /* Space between tags and description */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-tags {
+        margin-top: 1rem; /* Space between title and tags */
+        gap: 0.25rem; /* Reduce space between tags */
+        margin-bottom: 0rem; /* Space between tags and description */
+    }
+}
 
 
 
