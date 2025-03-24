@@ -899,8 +899,11 @@ img{
 }
 
 /*==================== CONTACT ME ====================*/
-.contact__container{
-    row-gap: 3rem;
+.contact__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 
@@ -913,10 +916,12 @@ img{
     margin-bottom: 15px; 
 }
 
-.contact__information{
+.contact__information {
     display: flex;
-    margin-bottom: var(--mb-2);
+    align-items: center; /* Align icon & text */
+    gap: 1rem; /* Adds spacing between icon and text */
 }
+
 
 .contact__icon{
     font-size: 2rem;
@@ -1498,6 +1503,17 @@ img{
     }
     
 }
+
+
+.articles__highlighted {
+    grid-column: span 3; /* Makes it span across all columns */
+    width: 100%;
+}
+
+.highlighted-card {
+    width: 100%;
+}
+
 
 #g-recaptcha-response {
     display: block !important;
