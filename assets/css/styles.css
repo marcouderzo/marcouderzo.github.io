@@ -689,7 +689,7 @@ ul.custom__list li {
     display: list-item !important;    /* Ensures it behaves like a list item */
     list-style-type: disc !important; 
     margin-bottom: var(--mb-0-5);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* Publication & Conference Cards */
