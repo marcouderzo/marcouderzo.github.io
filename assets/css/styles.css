@@ -667,6 +667,66 @@ img{
 }
 /*==================== Expertise ====================*/
 
+/*==================== CUSTOM CONTENT & ACADEMIC SECTIONS ====================*/
+.about__text-content {
+    line-height: 1.6;
+    margin-bottom: var(--mb-1-5);
+}
+
+.about__text-content p {
+    margin-bottom: var(--mb-1);
+}
+
+.custom__list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-bottom: var(--mb-1-5);
+}
+
+.custom__list li {
+    margin-bottom: var(--mb-0-5);
+    line-height: 1.5;
+}
+
+/* Publication & Conference Cards */
+.item__card {
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: .75rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.25rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.item__title {
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+    margin-bottom: var(--mb-0-5);
+}
+
+.item__subtitle {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    margin-bottom: var(--mb-0-5);
+}
+
+.item__meta {
+    font-size: var(--small-font-size);
+    font-style: italic;
+    color: var(--text-color-light);
+    margin-bottom: var(--mb-0-75);
+}
+
+.item__links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
 
 /* For medium devices and up */
 @media screen and (min-width: 768px) {
