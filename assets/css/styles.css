@@ -677,15 +677,19 @@ img{
     margin-bottom: var(--mb-1);
 }
 
-.custom__list {
-    list-style: disc;
-    padding-left: 1.25rem;
+/*==================== CUSTOM LIST FIX ====================*/
+ul.custom__list {
+    list-style-type: disc !important; /* Forces the bullet points */
+    padding-left: 2rem !important;    /* Forces the indentation */
+    margin-top: 0.75rem;
     margin-bottom: var(--mb-1-5);
 }
 
-.custom__list li {
+ul.custom__list li {
+    display: list-item !important;    /* Ensures it behaves like a list item */
+    list-style-type: disc !important; 
     margin-bottom: var(--mb-0-5);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* Publication & Conference Cards */
